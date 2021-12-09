@@ -136,13 +136,13 @@ export default class ProductContainer {
       if (newProduct.title) {
         productToBeUpdated.title = newProduct.title;
       }
-      if (!newProduct.description) {
+      if (newProduct.description) {
         productToBeUpdated.description = newProduct.description;
       }
-      if (!newProduct.code) {
+      if (newProduct.code) {
         productToBeUpdated.code = newProduct.code;
       }
-      if (!newProduct.stock) {
+      if (newProduct.stock) {
         productToBeUpdated.stock = parseInt(newProduct.stock);
       }
       if (newProduct.price) {
