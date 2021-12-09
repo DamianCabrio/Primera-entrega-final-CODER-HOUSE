@@ -7,7 +7,8 @@ const router = express.Router();
 const productContainer = new ProductContainer(__dirname + "/data/products.txt");
 
 const filePath = (filename) => {
-  return `http://localhost:8080/images/${filename}`;
+  const urlBase = process.env.URLBASE || "http://localhost:8080";
+  return `${urlBase}/images/${filename}`;
 };
 
 //GET
